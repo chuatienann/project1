@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <title>Memory Games</title>
+    <link rel='stylesheet' href='style.css'>
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
+    <script src='https://code.jquery.com/jquery-3.2.0.min.js'
+        integrity='sha256-JAW99MJVpJBGcbzEuXk4Az05s/XyDdBomFqNlM3ic+I=' crossorigin='anonymous'></script>
+    <script type='module' src='app.js'></script>
+    <!-- <script src='api.js'></script> -->
+</head>
+
+<body>
+    <div class='timer'></div>
+    <div id='container'>
+        <div id='game-area'>
+            <div id='game-area-left'>
+                <div class='combo'>Combo Count:</div>
+                <div class='combo-value'>123</div>
+            </div>
+            <div id='game-area-tiles'></div>
+            <div id='game-area-score'>
+                <div class='score'>Score:</div>
+                <div class='score-value'>123</div>
+            </div>
+        </div>
+        <div id="popup1" class="overlay">
+            <div class="popup">
+                <h2>Welcome!!!</h2>
+                <a class="close" href=#>×</a>
+                <div class="content-1">
+                    Please match all tiles to complete the game!
+                </div>
+                <div class="content-2">
+                    <p>Enter your name to continue</p>
+                    <form>
+                        <input type='text' id='userID'></input>
+                    </form>
+                </div>
+                <button id="start-game" onclick="selectGameMode()">
+                    <a>Start</a>
+                </button>
+                <button id="continue-game" onclick="checkExistingID()">
+                    <a>Continue</a>
+                </button>
+            </div>
+        </div>
+        <div id="popup2" class="overlay">
+            <div class="popup">
+                <h2 class='greet-user'>Hello</h2>
+                <a class="close" href=#>×</a>
+                <div class="content-1">
+                    Please choose a mode below:
+                </div>
+                <form>
+                    <input type='submit' id='easy-mode' value='Easy'>
+
+                    </button>
+                </form>
+            </div>
+        </div>
+        <div id="popup3" class="overlay">
+            <div class="popup">
+                <h2>Congratulations!!!</h2>
+                <a class="close" href=#>×</a>
+                <div class="content-1">
+                    🎉 Congratulations you're a winner 🎉
+                </div>
+                <div class="content-2">
+                    <p>Your score is <span id=finalScore></span></p>
+
+                </div>
+                <button id="play-again" onclick="playAgain()">
+                    <a>Play again</a>
+                </button>
+            </div>
+        </div>
+        <div id="popup4" class="overlay">
+            <div class="popup">
+                <h2>Sorry!!!</h2>
+                <a class="close" href=#>×</a>
+                <div class="content-1">
+                    Oops! You did not complete it in time 
+                </div>
+                <div class="content-2">
+                    <p>Better luck next time🏃💨</p>
+                    <p>Would you like to try again?</p>
+                </div>
+                <button id="try-again" onclick="playAgain()">
+                    <a>Try again</a>
+                </button>
+            </div>
+        </div>
+        <div id="popup5" class="overlay">
+            <div class="popup">
+                <h2>PokeMon Captured</h2>
+                <a class="close" href=#>×</a>
+                <div id='PokeDex'>
+                </div>
+                <button id="goBack" onclick="goBack()">
+                    <a>Go back</a>
+                </button>
+            </div>
+        </div>
+        <div id="popup6" class="overlay">
+            <div class="popup">
+                <h2>Pokemon here</h2>
+                <a class="close" href=#>×</a>
+                <div class="content-1">
+                    Bulbasaur
+                </div>
+                <div class="content-2">
+
+                </div>
+                <div class="content-3">
+                    Squirtle
+
+                </div>
+                <button id="goBack2" onclick="goBack2()">
+                    <a>Go back</a>
+                </button>
+            </div>
+        </div>
+</body>
+
+</html>
